@@ -85,13 +85,3 @@ function update() {
 
     requestId = null;
 }
-
-function cloneCards(count) {
-
-    var main = document.querySelector("main");
-
-
-    for (var i = 0; i < count; i++) {
-        main.appendChild(card.cloneNode(true));
-    }
-}

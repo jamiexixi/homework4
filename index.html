@@ -43,58 +43,60 @@
             <div id="header-background-front" class="header-background"></div>
         </div>
         <div id="small-toolbar" class="toolbar">
-            <div id="small-title" class="small-title">BMI Caculator</div>
+            <div id="small-title" class="small-title">BMI & BMR Caculator</div>
         </div>
         <div id="large-toolbar" class="toolbar tall">
-            <div id="large-title" class="large-title">BMI Caculator</div>
+            <div id="large-title" class="large-title">BMI & BMR Caculator</div>
         </div>
 
     </header>
 
     <main>
         <div class="accordion">
-            <h1 class="accordion__title">Calcuate Your Body Mass Index (BMI)</h1>
+            <h1 class="accordion__title">Calcuate Your Body Mass Index and Basal Metabolism Rate</h1>
             <h2 class="accordion__items">TRY IT NOW</h2>
             <div class="accordion__content">
                 <div class="bmi-content">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li role="presentation" class="active">
+                        <li role="presentation" value="male" class="active">
                             <a href="#male" aria-controls="male" role="tab" data-toggle="tab">
                                 Male
                             </a>
                         </li>
-                        <li role="presentation"><a href="#female" aria-controls="female" role="tab" data-toggle="tab">Female</a></li>
+                        <li role="presentation" value="female"><a href="#female" aria-controls="female" role="tab" data-toggle="tab">Female</a></li>
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="male">
                             <br>
                             <form>
                                 <div class="form-group has-success">
-                                    <label class="control-label" for="inputSuccess1" style="color:#3869e6">Age:</label>
-
-                                    <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock1" name="age" required>
+                                    <label class="control-label" for="inputSuccess1" style="color:aquamarine">Age:</label>
                                 </div>
+                                <div class="age-value">0</div>
+                                <input type="range" min="1" max="99" step="1" value="1">
+                                <br>
                                 <div class="row">
-                                    <div class="col-md-2" style="font-weight:bold;color:white;">Select Units:</div>
-                                    <div class="col-md-2" style="color:#3869e6">Weight Unit:</div>
+                                    <div class="col-md-12" style="font-weight:bold;color:aquamarine;">Select Units:</div>
+                                    <div class="col-md-2" style="color:white">Weight Unit:</div>
 
                                     <select class="col-md-2" id="weight-unit">
                                       
 
-                                     <option  class="option" value="Pounds">Pounds</option>
-                                      <option class="option" value="Kilos">Kilos</option>
+                                     <option  class="option" value="Pounds" style="color:white">Pounds</option>
+                                      <option class="option" value="Kilos" style="color:white">Kilos</option>
                                 </select>
-
-                                    <div class="col-md-2" style="color:#3869e6">Height Unit:</div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2" style="color:white">Height Unit:</div>
                                     <select class="col-md-2" id="height-unit">
-                                     <option name="option" value="feet-inches" >Feet Inches</option>
-                                      <option name="option" value="cm">CM</option>
+                                     <option name="option" value="feet-inches" style="color:white">Feet Inches</option>
+                                      <option name="option" value="cm" style="color:white">CM</option>
                                 </select>
-                                    <div class="col-md-2"><button type="button" class="btn btn-primary" id="unit-submit">OK</button></div>
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-1"><button type="button" class="btn btn-success btn-xs" id="unit-submit" style="font-size: 10px;">OK</button></div>
                                 </div>
                                 <br>
                                 <div class="form-group has-success">
-                                    <label class="control-label" for="inputSuccess2" style="color:#3869e6">My weight:</label>
+                                    <label class="control-label" for="inputSuccess2" style="color:aquamarine">My weight:</label>
                                     <div class="row">
                                         <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess2" name="weight"></div>
                                         <p class="col-md-3" id="input1" style="color:white">Pounds</p>
@@ -102,31 +104,89 @@
                                     </div>
                                 </div>
                                 <div class="form-group has-success">
-                                    <label class="control-label" for="inputSuccess3" style="color:#3869e6">My height:</label>
+                                    <label class="control-label" for="inputSuccess3" style="color:aquamarine">My height:</label>
                                     <div class="row">
                                         <div id="input3">
                                             <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess3" name="height"></div>
                                             <p class="col-md-2" style="color:white">Feet</p>
-                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess3" name="height"></div>
+                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess4" name="height"></div>
                                             <p class="col-md-2" style="color:white">Inches</p>
                                         </div>
                                         <div id="input4">
-                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess3" name="height"></div>
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess5" name="height"></div>
                                             <p class="col-md-3" style="color:white">CM</p>
                                         </div>
                                         <div id="input5">
-                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess3" name="height"></div>
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess6" name="height"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submit" style="display: block; float: left;">Sumbit</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submit" style="display: block; float: left;">Submit</button>
                             </form>
                         </div>
 
 
                         <div role="tabpanel" class="tab-pane fade" id="female">
+                            <br>
+                            <form>
+                                <div class="form-group has-success">
+                                    <label class="control-label" for="inputSuccess1" style="color:aquamarine">Age:</label>
+                                </div>
+                                <div class="age-value">0</div>
+                                <input type="range" min="1" max="99" step="1" value="1">
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12" style="font-weight:bold;color:aquamarine;">Select Units:</div>
+                                    <div class="col-md-2" style="color:white">Weight Unit:</div>
+
+                                    <select class="col-md-2" id="weight-unit">
+                                      
+
+                                     <option  class="option" value="Pounds" style="color:white">Pounds</option>
+                                      <option class="option" value="Kilos" style="color:white">Kilos</option>
+                                </select>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2" style="color:white">Height Unit:</div>
+                                    <select class="col-md-2" id="height-unit">
+                                     <option name="option" value="feet-inches" style="color:white">Feet Inches</option>
+                                      <option name="option" value="cm" style="color:white">CM</option>
+                                </select>
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-1"><button type="button" class="btn btn-success btn-xs" id="unit-submit" style="font-size: 10px;">OK</button></div>
+                                </div>
+                                <br>
+                                <div class="form-group has-success">
+                                    <label class="control-label" for="inputSuccess2" style="color:aquamarine">My weight:</label>
+                                    <div class="row">
+                                        <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess2" name="weight"></div>
+                                        <p class="col-md-3" id="input1" style="color:white">Pounds</p>
+                                        <p class="col-md-3" id="input2" style="color:white">Kilos</p>
+                                    </div>
+                                </div>
+                                <div class="form-group has-success">
+                                    <label class="control-label" for="inputSuccess3" style="color:aquamarine">My height:</label>
+                                    <div class="row">
+                                        <div id="input3">
+                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess3" name="height"></div>
+                                            <p class="col-md-2" style="color:white">Feet</p>
+                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess4" name="height"></div>
+                                            <p class="col-md-2" style="color:white">Inches</p>
+                                        </div>
+                                        <div id="input4">
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess5" name="height"></div>
+                                            <p class="col-md-3" style="color:white">CM</p>
+                                        </div>
+                                        <div id="input5">
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess6" name="height"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submit" style="display: block; float: left;">Submit</button>
+                            </form>
 
                         </div>
                     </div>
@@ -143,7 +203,9 @@
                         <h4 class="modal-title">RESULT</h4>
                     </div>
                     <div class="modal-body">
-                        <p class="BMI"></p>
+                        <p class="BMI" style="color:black;font-size: 28px;"></p>
+                        <div style="display: block;margin-left: auto;margin-right: auto;margin-top: 30px;"><img src="..." class="img-rounded"></div>
+                        <p class="BMR" style="color:black;font-size: 28px;"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -203,6 +265,100 @@
                     $(this).next().toggleClass("open");
                 }
             });
+        });
+    </script>
+    <script>
+        var elem = document.querySelector('input[type="range"]');
+
+        var rangeValue = function() {
+            var newValue = elem.value;
+            var target = document.querySelector('.age-value');
+            target.innerHTML = newValue;
+        }
+
+        elem.addEventListener("input", rangeValue);
+    </script>
+
+    <script>
+        $(".btn btn-primary").click(function() {
+            var gender = $(".nav nav-tabs nav-justified li").val();
+            var age = $(".age-value").val();
+            var option1 = $("#weight-unit option:selected").val();
+            var option2 = $("#height-unit option:selected").val();
+            var pounds = parseInt($("#inputSuccess2").val());
+            var kilos = parseInt($("#inputSuccess2").val());
+            var feet = parseInt($("#inputSuccess3").val());
+            var inches = parseInt($("#inputSuccess4").val());
+            var cm = parseInt($("#inputSuccess5").val());
+
+            if (gender === "Male") {
+                if (option1 === "Kilos" && option2 === "cm") {
+                    var BMR = Math.floor(66 + 13.7 * kilos + 5 * cm - 6.8 * age);
+                    var BMI = kilos * 10000 / (cm * cm);
+                } else if (option1 === "Kilos" && option2 === "feet-inches") {
+                    var BMR = 66 + 13.7 * kilos + 5 * feet * 30.48 + 5 * inches * 2.54 - 6.8 * age;
+                    var cm = 30.84 * feet + 2.54 * inches;
+                    var BMI = kilos * 10000 / (cm * cm);
+                } else if (option1 === "Pounds" && option2 === "cm") {
+                    var BMR = 66 + 13.7 * pounds * 0.0435 + 5 * cm - 6.8 * age;
+                    var kilo = pounds * 0.0435;
+                    var BMI = kilos * 10000 / (cm * cm);
+                } else if (option1 === "Pounds" && option2 === "feet-inches") {
+                    var BMR = 66 + 13.7 * pounds * 0.0435 + 5 * feet * 30.48 + 5 * inches * 2.54 - 6.8 * age;
+                    var kilos = pounds * 0.0435;
+                    var cm = 30.84 * feet + 2.54 * inches;
+                    var BMI = kilos * 10000 / (cm * cm);
+                }
+                if (BMI < 18.5) {
+                    $(".BMI").text("Your BMI is: " + Math.round(BMI) + ", You are under weight");
+                    $(".img-rounded").attr("src", "picture/under.jpg");
+                } else if (BMI > 18.5 && BMI < 25) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are normal weight");
+                    $(".img-rounded").attr("src", "picture/normal.png");
+                } else if (BMI >= 25 && BMI <= 30) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are over weight");
+                    $(".img-rounded").attr("src", "picture/over.jpg");
+                } else if (BMI >= 30) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are obesity , Doctor Robot is not happy!");
+                    $(".img-rounded").attr("src", "picture/obesity.jpg");
+                }
+                $(".BMR").html("Your BMR is: " + Math.round(BMR));
+            } else if (gender === "Female") {
+                if (option1 === "Kilos" && option2 === "cm") {
+                    var BMR = 655 + 9.6 * kilos + 1.8 * cm - 4.7 * age;
+                    var BMI = kilos * 10000 / (cm * cm);
+
+                } else if (option1 === "Kilos" && option2 === "feet-inches") {
+                    var BMR = 655 + 9.6 * kilos + 1.8 * feet * 30.48 + 1.8 * inches * 2.54 - 4.7 * age;
+                    var cm = 30.84 * feet + 2.54 * inches
+                    var BMI = kilos * 10000 / (cm * cm);
+                } else if (option1 === "Pounds" && option2 === "cm") {
+                    var BMR = 655 + 9.6 * pounds * 0.0435 + 1.8 * cm - 4.7 * age;
+                    var kilo = pounds * 0.0435;
+                    var BMI = kilos * 10000 / (cm * cm);
+                } else if (option1 === "Pounds" && option2 === "feet-inches") {
+                    var BMR = 655 + 9.6 * pounds * 0.0435 + 1.8 * feet * 30.48 + 1.8 * inches * 2.54 - 4.7 * age;
+                    var kilos = pounds * 0.0435;
+                    var cm = 30.84 * feet + 2.54 * inches;
+                    var BMI = kilos * 10000 / (cm * cm);
+                }
+                if (BMI < 18.5) {
+                    $(".BMI").text("Your BMI is: " + Math.round(BMI) + ", You are under weight");
+                    $(".img-rounded").attr("src", "picture/under.jpg");
+                } else if (BMI > 18.5 && BMI < 25) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are normal weight");
+                    $(".img-rounded").attr("src", "picture/normal.png");
+                } else if (BMI >= 25 && BMI <= 30) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are over weight");
+                    $(".img-rounded").attr("src", "picture/over.jpg");
+                } else if (BMI >= 30) {
+                    $(".BMI").html("Your BMI is: " + Math.round(BMI) + ", You are obesity , Doctor Robot is not happy!");
+                    $(".img-rounded").attr("src", "picture/obesity.jpg");
+                }
+                $(".BMR").html("Your BMR is: " + Math.round(BMR));
+            }
+
+
         });
     </script>
     <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js "></script>
