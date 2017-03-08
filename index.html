@@ -160,7 +160,7 @@
                                 <div class="form-group has-success">
                                     <label class="control-label" for="inputSuccess8" style="color:aquamarine">My weight:</label>
                                     <div class="row">
-                                        <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess8" name="weight"></div>
+                                        <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess8" name="weight2"></div>
                                         <p class="col-md-3" id="input6" style="color:white">Pounds</p>
                                         <p class="col-md-3" id="input7" style="color:white">Kilos</p>
                                     </div>
@@ -169,17 +169,17 @@
                                     <label class="control-label" for="inputSuccess9" style="color:aquamarine">My height:</label>
                                     <div class="row">
                                         <div id="input8">
-                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess9" name="feet"></div>
+                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess9" name="feet2"></div>
                                             <p class="col-md-2" style="color:white">Feet</p>
-                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess10" name="inches"></div>
+                                            <div class="col-md-4"> <input type="text" class="form-control" id="inputSuccess10" name="inches2"></div>
                                             <p class="col-md-2" style="color:white">Inches</p>
                                         </div>
                                         <div id="input9">
-                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess11" name="cm"></div>
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess11" name="cm2"></div>
                                             <p class="col-md-3" style="color:white">CM</p>
                                         </div>
                                         <div id="input10">
-                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess12" name="height"></div>
+                                            <div class="col-md-8"> <input type="text" class="form-control" id="inputSuccess12" name="height2"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -221,9 +221,9 @@
                         <h4 class="modal-title">RESULT</h4>
                     </div>
                     <div class="modal-body">
-                        <p class="BMI" style="color:black;font-size: 28px;"></p>
+                        <p class="BMIfe" style="color:black;font-size: 28px;"></p>
                         <div style="display: block;margin-left: auto;margin-right: auto;margin-top: 30px;" id="img-change2"></div>
-                        <p class="BMR" style="color:black;font-size: 28px;"></p>
+                        <p class="BMRfe" style="color:black;font-size: 28px;"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -276,23 +276,23 @@
             };
         });
         $("#unit-submit2").click(function() {
-            var option1 = $("#weight-unit2 option:selected").val();
-            var option2 = $("#height-unit2 option:selected").val();
-            if (option1 === "Pounds") {
+            var option3 = $("#weight-unit2 option:selected").val();
+            var option4 = $("#height-unit2 option:selected").val();
+            if (option3 === "Pounds") {
 
                 $("#input6").show();
                 $("#input7").hide();
-            } else if (option1 === "Kilos") {
+            } else if (option3 === "Kilos") {
 
                 $("#input7").show();
                 $("#input6").hide();
             };
-            if (option2 === "feet-inches") {
+            if (option4 === "feet-inches") {
 
                 $("#input9").hide();
                 $("#input8").show();
                 $("#input10").hide();
-            } else if (option2 === "cm") {
+            } else if (option4 === "cm") {
 
                 $("#input8").hide();
                 $("#input9").show();
@@ -363,7 +363,7 @@
                     var BMI = kilos * 10000 / (cm * cm);
                 } else if (option1 === "Pounds" && option2 === "cm") {
                     var BMR = 66 + 13.7 * pounds * 0.0435 + 5 * cm - 6.8 * age;
-                    var kilo = pounds * 0.0435;
+                    var kilos = pounds * 0.0435;
                     var BMI = kilos * 10000 / (cm * cm);
                 } else if (option1 === "Pounds" && option2 === "feet-inches") {
                     var BMR = 66 + 13.7 * pounds * 0.0435 + 5 * feet * 30.48 + 5 * inches * 2.54 - 6.8 * age;
@@ -417,49 +417,75 @@
         });
         $(function() {
             $('#second').click(function() {
-                var age = $('#female-age').val();
-                var option1 = $('#weight-unit2 option:selected').val();
-                var option2 = $('#height-unit2 option:selected').val();
-                var pounds = parseInt($('input[name=weight]').val());
-                var kilos = parseInt($('input[name=weight]').val());
-                var feet = parseInt($('input[name=feet]').val());
-                var inches = parseInt($('input[name=inches]').val());
-                var cm = parseInt($('input[name=cm]').val());
+                var agefe = $("#female-age").val();
+                var option3 = $("#weight-unit2 option:selected").val();
+                var option4 = $("#height-unit2 option:selected").val();
+                var poundsfe = $('input[name="weight2"]').val();
+                var kilosfe = $('input[name="weight2"]').val();
+                var feetfe = $('input[name="feet2"]').val();
+                var inchesfe = $('input[name="inches2"]').val();
+                var cmfe = $('input[name="cm2"]').val();
 
-                if (option1 === "Kilos" && option2 === "cm") {
-                    var BMR = 655 + 9.6 * kilos + 1.8 * cm - 4.7 * age;
-                    var BMI = kilos * 10000 / (cm * cm);
 
-                } else if (option1 === "Kilos" && option2 === "feet-inches") {
-                    var BMR = 655 + 9.6 * kilos + 1.8 * feet * 30.48 + 1.8 * inches * 2.54 - 4.7 * age;
-                    var cm = 30.84 * feet + 2.54 * inches
-                    var BMI = kilos * 10000 / (cm * cm);
-                } else if (option1 === "Pounds" && option2 === "cm") {
-                    var BMR = 655 + 9.6 * pounds * 0.0435 + 1.8 * cm - 4.7 * age;
-                    var kilo = pounds * 0.0435;
-                    var BMI = kilos * 10000 / (cm * cm);
-                } else if (option1 === "Pounds" && option2 === "feet-inches") {
-                    var BMR = 655 + 9.6 * pounds * 0.0435 + 1.8 * feet * 30.48 + 1.8 * inches * 2.54 - 4.7 * age;
-                    var kilos = pounds * 0.0435;
-                    var cm = 30.84 * feet + 2.54 * inches;
-                    var BMI = kilos * 10000 / (cm * cm);
+                if (option3 === "Kilos" && option4 === "cm") {
+                    var BMRfe = Math.floor(66 + 13.7 * kilosfe + 5 * cmfe - 6.8 * agefe);
+                    var BMIfe = kilosfe * 10000 / (cmfe * cmfe);
+                } else if (option3 === "Kilos" && option4 === "feet-inches") {
+                    var BMRfe = 66 + 13.7 * kilosfe + 5 * feetfe * 30.48 + 5 * inchesfe * 2.54 - 6.8 * agefe;
+                    var cmfe = 30.84 * feetfe + 2.54 * inchesfe;
+                    var BMIfe = kilosfe * 10000 / (cmfe * cmfe);
+                } else if (option3 === "Pounds" && option4 === "cm") {
+                    var BMRfe = 66 + 13.7 * poundsfe * 0.0435 + 5 * cmfe - 6.8 * agefe;
+                    var kilosfe = poundsfe * 0.0435;
+                    var BMIfe = kilosfe * 10000 / (cmfe * cmfe);
+                } else if (option3 === "Pounds" && option4 === "feet-inches") {
+                    var BMRfe = 66 + 13.7 * poundsfe * 0.0435 + 5 * feetfe * 30.48 + 5 * inchesfe * 2.54 - 6.8 * agefe;
+                    var kilosfe = poundsfe * 0.0435;
+                    var cmfe = 30.84 * feetfe + 2.54 * inchesfe;
+                    var BMIfe = kilosfe * 10000 / (cmfe * cmfe);
                 }
+                var html = $("div #vf").html();
+                var html1 = $("div #ff").html();
+                var html2 = $("div #rf").html();
+                var html3 = $("div #tf").html();
+                alert(html);
+                $("div #vf").remove();
+                alert(html1);
+                $("div #ff").remove();
+                alert(html2);
+                $("div #rf").remove();
+                alert(html3);
+                $("div #tf").remove();
+                if (BMIfe < 18.5) {
+                    $("#submit2 .modal-body .BMIfe").text("Your BMI is: " + Math.round(BMIfe) + ", You are under weight");
 
-                if (BMI < 18.5) {
-                    $(".modal fade .modal-body .BMI").text("Your BMI is: " + Math.round(BMI) + ", You are under weight");
-                    document.getElementsByClassName("img-change").innerHTML = '<img src="picture/under.jpg"/>';
-                } else if (BMI > 18.5 && BMI < 25) {
-                    $(".modal fade .modal-body .BMI").text("Your BMI is: " + Math.round(BMI) + ", You are normal weight");
-                    $(".img-rounded").attr("src", "picture/normal.png");
-                } else if (BMI >= 25 && BMI <= 30) {
-                    $(".modal fade .modal-body .BMI").text("Your BMI is: " + Math.round(BMI) + ", You are over weight");
-                    document.getElementsByClassName("img-change").innerHTML = '<img src="picture/over.jpg"/>';
-                } else if (BMI >= 30) {
-                    $(".modal fade .modal-body .BMI").text("Your BMI is: " + Math.round(BMI) + ", You are obesity , Doctor Robot is not happy!");
-                    document.getElementById("img-change").innerHTML = '<img src="picture/obesity.jpg">';
+                    var pic = "<img id='vf' src='picture/under.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
+
+                    $("#img-change2").append(pic);
+                } else if (BMIfe > 18.5 && BMIfe < 25) {
+                    $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are normal weight");
+
+
+                    var pic = "<img id='ff' src='picture/normal.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
+
+                    $("#img-change2").append(pic);
+                } else if (BMIfe >= 25 && BMIfe <= 30) {
+                    $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are over weight");
+
+
+                    var pic = "<img id='rf' src='picture/over.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
+
+                    $("#img-change2").append(pic);
+                } else if (BMIfe >= 30) {
+                    $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are obesity , Doctor Robot is not happy!");
+
+
+                    var pic = "<img id='tf' src='picture/obesity.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
+
+                    $("#img-change2").append(pic);
+
                 }
-                $(".modal fade .modal-body .BMR").text("Your BMR is: " + Math.round(BMR));
-
+                $("#submit2 .modal-body .BMRfe").html("Your BMR is: " + Math.round(BMRfe));
             })
         });
     </script>
