@@ -9,7 +9,7 @@
 .accordion__title {
     padding: 35px 20px;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
     background-color: #253141;
@@ -98,7 +98,7 @@
 }
 
 .accordion__content.open {
-    height: 500px;
+    height: 560px;
     overflow-y: scroll;
     opacity: 1;
 }

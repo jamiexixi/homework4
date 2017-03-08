@@ -44,7 +44,7 @@ footer {
 }
 
 .age-value2 {
-    color: aquamarine;
+    color: #f585cc;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
@@ -55,7 +55,7 @@ footer {
     margin-right: auto;
     margin-bottom: 15px;
     letter-spacing: -.07em;
-    text-shadow: darkblue 0.3px 0.3px 0.3px;
+    text-shadow: white 0.3px 0.3px 0.3px;
 }
 
 input[type="range"] {
@@ -69,9 +69,20 @@ input[type="range"] {
     outline: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[id="male-age-change"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: aquamarine;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+input[id="range-change-fe"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #f585cc;
     width: 15px;
     height: 15px;
     border-radius: 50%;
