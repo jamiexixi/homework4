@@ -72,8 +72,8 @@
                                 <div class="form-group has-success">
                                     <label class="control-label" for="inputSuccess1" style="color:aquamarine">Age:</label>
                                 </div>
-                                <div class="age-value" id="male-age">0</div>
-                                <input type="range" min="0" max="99" step="1" value="0">
+                                <div class="age-value">0</div>
+                                <input id="male-age" type="range" min="0" max="99" step="1" value="0">
                                 <br>
                                 <div class="row">
                                     <div class="col-md-12" style="font-weight:bold;color:aquamarine;">Select Units:</div>
@@ -134,8 +134,8 @@
                                 <div class="form-group has-success">
                                     <label class="control-label" for="inputSuccess7" style="color:aquamarine">Age:</label>
                                 </div>
-                                <div class="age-value" id="female-age">0</div>
-                                <input type="range" min="0" max="99" step="1" value="0">
+                                <div class="age-value2">0</div>
+                                <input id="female-age" type="range" min="0" max="99" step="1" value="0">
                                 <br>
                                 <div class="row">
                                     <div class="col-md-12" style="font-weight:bold;color:aquamarine;">Select Units:</div>
@@ -318,15 +318,21 @@
         });
     </script>
     <script>
-        var elem = document.querySelector('input[type="range"]');
-
+        var elem = document.querySelector('input[type="range" id="male-age"]');
+        var elem2 = document.querySelector('input[type="range" id="female-age"]');
         var rangeValue = function() {
             var newValue = elem.value;
             var target = document.querySelector('.age-value');
             target.innerHTML = newValue;
         }
+        var rangeValue2 = function() {
+            var newValue2 = elem2.value;
+            var target2 = document.querySelector('.age-value2');
+            target2.innerHTML = newValue2;
+        }
 
         elem.addEventListener("input", rangeValue);
+        elem2.addEventListener("input", rangeValue2);
     </script>
 
 
