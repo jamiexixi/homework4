@@ -1,19 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,800);
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-size: 1rem;
     line-height: 1.5;
     font-family: "Roboto Condensed";
-    padding: 0 20px;
 }
 
 main {
     padding-top: 300px;
     font-family: arial;
     background: #eee;
+    padding-bottom: 50px;
 }
 
 .bmi-content {
@@ -25,7 +20,9 @@ footer {
     height: 150px;
     background-color: #4a4b4b;
     clear: both;
-    margin-top: 10px;
+    display: block;
+    top: 0;
+    left: 0;
 }
 
 .age-value {
@@ -98,4 +95,112 @@ input[id="range-change-fe"]::-webkit-slider-thumb {
 
 input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1.6);
+}
+
+.about {
+    background-image: url(picture/about.jpg);
+    background-color: #a8a9a8;
+    background-blend-mode: multiply;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: scroll;
+    background-size: 100%;
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+    margin-top: 32.8177px;
+    padding-top: 45px;
+    text-align: center;
+    color: #eceeef;
+    display: block;
+}
+
+.a-tittle {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.875em;
+    font-weight: bolder;
+    letter-spacing: .05em;
+    display: block;
+    color: #fff;
+}
+
+.a-tittle :after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #1ce8b5;
+    margin: 15px auto;
+}
+
+.a-main {
+    padding-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.mytab {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#a-picture {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 688px;
+    font-family: "franklin-gothic-urw", Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 1.625em;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+.back-to-top a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.glyphicon glyphicon-menu-up {
+    vertical-align: middle;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+}
+
+a:-webkit-any-link {
+    cursor: auto;
+}
+
+.back-to-top {
+    border-top: 2px solid #e0e0e0;
+    margin-bottom: -2px;
+    margin-top: 90px;
+    padding: 13px 0;
+    text-align: center;
+    font-family: "franklin-gothic-urw", Verdana, Geneva, sans-serif;
+    font-weight: 500;
+}
+
+.glyphicon glyphicon-menu-up:before {
+    content: "\e006";
 }
