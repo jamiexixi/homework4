@@ -124,6 +124,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     letter-spacing: .05em;
     display: block;
     color: #fff;
+    text-shadow: 2px 2px 2px #2d2d35;
 }
 
 .a-tittle :after {
@@ -202,4 +203,15 @@ a:-webkit-any-link {
 
 .glyphicon glyphicon-menu-up:before {
     content: "\e006";
+}
+
+.footer {
+    float: left;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-size: 9px;
 }

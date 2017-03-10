@@ -43,17 +43,17 @@
             <div id="header-background-front" class="header-background"></div>
         </div>
         <div id="small-toolbar" class="toolbar">
-            <div id="small-title" class="small-title">BMI & BMR Caculator</div>
+            <div id="small-title" class="small-title">BMI Caculator</div>
         </div>
         <div id="large-toolbar" class="toolbar tall">
-            <div id="large-title" class="large-title">BMI & BMR Caculator</div>
+            <div id="large-title" class="large-title">BMI Caculator</div>
         </div>
 
     </header>
 
     <main>
         <div class="accordion">
-            <h1 class="accordion__title" style="font-family: 'Ubuntu', Arial, Helvetica, sans-serif;font-weight: 500 !important;">Calcuate Your Body Mass Index and Basal Metabolism Rate</h1>
+            <h1 class="accordion__title" style="font-family: 'Ubuntu', Arial, Helvetica, sans-serif;font-weight: 500 !important;">Calcuate Your Body Mass Index</h1>
             <h2 class="accordion__items">TRY IT NOW</h2>
             <div class="accordion__content">
                 <div class="bmi-content">
@@ -203,9 +203,11 @@
                         <h4 class="modal-title">RESULT</h4>
                     </div>
                     <div class="modal-body">
-                        <p class="BMI" style="color:black;font-size: 28px;"></p>
+                        <p class="BMI" style="color:black;font-size: 25px;"></p>
+                        <p class="condition" style="color:darkblue;font-size:20px;"></p>
                         <div style="display: block;margin-left: auto;margin-right: auto;margin-top: 30px;" id="img-change"></div>
-                        <p class="BMR" style="color:black;font-size: 28px;"></p>
+                        <p class="tips" style="color:black;font-size: 20px;"></p>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -221,9 +223,11 @@
                         <h4 class="modal-title">RESULT</h4>
                     </div>
                     <div class="modal-body">
-                        <p class="BMIfe" style="color:black;font-size: 28px;"></p>
+                        <p class="BMIfe" style="color:black;font-size: 25px;"></p>
+                        <p class="condition2" style="color:darkblue;font-size:20px;"></p>
                         <div style="display: block;margin-left: auto;margin-right: auto;margin-top: 30px;" id="img-change2"></div>
-                        <p class="BMRfe" style="color:black;font-size: 28px;"></p>
+                        <p class="tips2" style="color:black;font-size: 20px;"></p>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -233,35 +237,27 @@
         </div>
         <div class="about">
             <div class="a-tittle">
-                ABOUT BMI & BMR
+                WHAT IS BMI ?
             </div>
             <div class="a-main">
                 <div class="row">
                     <div class="col-sm-6">
-                        <ul id="myTabs" role="tablist">
-                            <li class="mytab" role="presentation">
-                                <a href="#a-bmi" role="tab">
-                                    <p>What is BMI?</p>
-                                </a>
-                            </li>
-                            <li class="mytab" role="presentation">
-                                <a href="#a-bmr" role="tab">
-                                    <p>What is BMR?</p>
-                                </a>
-                            </li>
-                        </ul>
+                        <p style="color: #615b57;text-align: center;float: left; background-color: #fff;padding: 25px;font: inherit;margin-left: 100px;margin-right: 100px;margin-top: 20px">BMI compares your weight to your height, and is calculated by dividing your weight in kilograms by your height in metres squared. It gives you an idea of whether you’re underweight, a healthy weight, overweight, or obese for your
+                            height. BMI is one type of tool to help health professionals to assess risk for chronic disease. Another important tool is waist circumference. It is also important to understand your other risk factors.</p>
+                        <p style="color: #615b57;text-align: center;float: left; background-color: #fff;padding: 25px;font: inherit;margin-left: 100px;margin-right: 100px;margin-top: 20px">BMI is a useful measurement for most people over 18 years old. But it is only an estimate and it doesn’t take into account gender, age, ethnicity and body composition. We recommend you also check your waist measurement, and other
+                            risk factors.</p>
                     </div>
                     <div class="col-sm-6">
-                        <div class="tab-content" id="a-picture">
-                            <div role="tabpanel" id="a-bmi">BMI'S PICTURE INPUT</div>
-                            <div role="tabpanel" id="a-bmr">BMR'S PICTURE INPUT</div>
+                        <img src="picture/BMICHART.jpg" style="height: 300px;display: block;margin-left: auto;margin-right: auto;margin-top: 20px">
+                        <br>
+                        <p style="text-align: center;font-size: 18px ;color:#fff;"><a href="http://www.chirotexas.org/index.php?option=com_content&view=article&id=2106:high-bmi-associated-with-chronic-kidney-disease&catid=23:news-information&Itemid=178">Go to the original page</a></p>
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container ">
+        </div>
+        <div class="container">
             <div class="back-to-top ">
                 <a href="# " class="cta--secondary ">Back To Top <i class="glyphicon glyphicon-menu-up "></i></a>
             </div>
@@ -270,13 +266,15 @@
 
     </main>
     <footer>
+        <div class="footer">Reference:
+            <p><a href="http://www.chp.gov.hk/en/data/4/10/280/427.html">Centre for Health Protection</a></p>
+            <p><a href="https://heartfoundation.org.au/your-heart/know-your-risks/healthy-weight/bmi-calculator">HEART FOUNDATION</a></p>
+            <p><a href="http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429">Healthy Lifestyle:Nutrition and healthy eating</a></p>
+            <p><a href="http://www.chirotexas.org/index.php?option=com_content&view=article&id=2106:high-bmi-associated-with-chronic-kidney-disease&catid=23:news-information&Itemid=178">High BMI Associated With Chronic Kidney Disease</a></p>
+            <p><a href="http://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/healthy+living/healthy+weight/tips+for+maintaining+healthy+weight">Tips for maintaining healthy weight</a></p>
+        </div>
     </footer>
-    <script>
-        $('#myTabs a').click(function(e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-    </script>
+
     <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -423,35 +421,39 @@
                 alert(html3);
                 $("div #nf").remove();
                 if (BMI < 18.5) {
-                    $("#submit1 .modal-body .BMI").text("Your BMI is: " + Math.round(BMI) + ", You are under weight");
-
+                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are under weight!");
+                    $("#submit1 .modal-body .condition").html("5.7% male adults in HK, and 10.5% of total adults, have the same health condition with you.");
                     var pic = "<img id='cf' src='picture/under.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change").append(pic);
+                    $("#submit1 .modal-body .tips").html("Tips for you:<br><ul><li><b>Eat more frequently:</b> Eat five to six smaller meals during the day rather than two or three large meals.</li><li><b>Choose nutrient-rich foods: </b>As part of an overall healthy diet, choose whole-grain breads, pastas and cereals; fruits and vegetables; dairy products; lean protein sources; and nuts and seeds.</li><li><b>Try smoothies and shakes:</b> Drink smoothies or healthy shakes made with milk and fresh or frozen juice, and sprinkle in some ground flaxseed. In some cases, a liquid meal replacement may be recommended.</li><li><b>Make every bite count:</b> Snack on nuts, peanut butter, cheese, dried fruits and avocados. Have a bedtime snack, such as a peanut butter and jelly sandwich, or a wrap sandwich with avocado, sliced vegetables, and lean meat or cheese.</li><li><b>Exercise:</b> Especially strength training, can help you gain weight by building up your muscles. Exercise may also stimulate your appetite.</li></ul>");
+
                 } else if (BMI > 18.5 && BMI < 25) {
-                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are normal weight");
-
-
+                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are normal weight^^");
+                    $("#submit1 .modal-body .condition").html("42.9% male adults in HK, and 47.3% of total adults, have a healthy condition like you.");
+                    $("#submit1 .modal-body .tips").html("The best ways to maintain a healthy weight:<br><ul><li>Make healthy living a priority for yourself and your family;</li><li>Choose to eat good, healthy food;</li><li>Drink water instead of sugary drinks;</li><li>Shop to be healthy – and help your budget too;</li><li>Be active for at least 30 minutes every day;</li><li>Sit less and move more</li></ul>");
                     var pic = "<img id='bf' src='picture/normal.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change").append(pic);
                 } else if (BMI >= 25 && BMI <= 30) {
-                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are over weight");
-
+                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are over weight!");
+                    $("#submit1 .modal-body .condition").html("20.8% male adults in HK, and 18.2% of total adults, have a healthy condition like you.");
 
                     var pic = "<img id='af' src='picture/over.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change").append(pic);
+                    $("#submit1 .modal-body .tips").html("Tip for you to start exercise:<ul><li>Before You Begin: Cut Yourself Some Slack;</li><li>Healthy Living Is a Skill You Improve At, Not a Thing You Just Do;</li><li>Find Something You Enjoy Doing, and Start From There;</li><li>Focus On What You Can Do Right Now, Not On the Finish Line;</li><li>Think of Healthy Habits Like a Video Game: Keep Your Life Bar Full;</li><liDon't Do It Alone: Track Your Progress, and Get Others to Help;</li>");
                 } else if (BMI >= 30) {
-                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are obesity , Doctor Robot is not happy!");
+                    $("#submit1 .modal-body .BMI").html("Your BMI is: " + Math.round(BMI) + ", You are obesity! Do some change now!");
+                    $("#submit1 .modal-body .condition").html("27.5% male adults in HK, and 21.0% of total adults, have a healthy condition like you.");
 
 
                     var pic = "<img id='nf' src='picture/obesity.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change").append(pic);
-
+                    $("#submit1 .modal-body .tips").html("Some weight loss tips to reduce obesity:<ul><li>Calculate How Much You Should Lose;</li><li>Change Your Eating Habits;</li><li>Exercise Regularly;</li><li>Try Baking Instead of Frying;</li><li>Try Natural Herbs;</li><li>Incorporate Different Spices into Your Food;</li><li>Get Some of the Stress Out of Your Life</li>");
                 }
-                $("#submit1 .modal-body .BMR").html("Your BMR is: " + Math.round(BMR));
+
             })
         });
         $(function() {
@@ -497,34 +499,39 @@
                 $("div #tf").remove();
                 if (BMIfe < 18.5) {
                     $("#submit2 .modal-body .BMIfe").text("Your BMI is: " + Math.round(BMIfe) + ", You are under weight");
-
+                    $("#submit2 .modal-body .condition2").html("14.4% female adults in HK, and 10.5% of total adults, have the same health condition with you.");
                     var pic = "<img id='vf' src='picture/under.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change2").append(pic);
+                    $("#submit2 .modal-body .tips2").html("Tips for you:<br><ul><li><b>Eat more frequently:</b> Eat five to six smaller meals during the day rather than two or three large meals.</li><li><b>Choose nutrient-rich foods: </b>As part of an overall healthy diet, choose whole-grain breads, pastas and cereals; fruits and vegetables; dairy products; lean protein sources; and nuts and seeds.</li><li><b>Try smoothies and shakes:</b> Drink smoothies or healthy shakes made with milk and fresh or frozen juice, and sprinkle in some ground flaxseed. In some cases, a liquid meal replacement may be recommended.</li><li><b>Make every bite count:</b> Snack on nuts, peanut butter, cheese, dried fruits and avocados. Have a bedtime snack, such as a peanut butter and jelly sandwich, or a wrap sandwich with avocado, sliced vegetables, and lean meat or cheese.</li><li><b>Exercise:</b> Especially strength training, can help you gain weight by building up your muscles. Exercise may also stimulate your appetite.</li></ul>")
                 } else if (BMIfe > 18.5 && BMIfe < 25) {
                     $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are normal weight");
-
+                    $("#submit2 .modal-body .condition2").html("51.0% female adults in HK, and 47.3% of total adults, have a healthy condition like you.");
+                    $("#submit2 .modal-body .tips2").html("The best ways to maintain a healthy weight:<br><ul><li>Make healthy living a priority for yourself and your family;</li><li>Choose to eat good, healthy food;</li><li>Drink water instead of sugary drinks;</li><li>Shop to be healthy – and help your budget too;</li><li>Be active for at least 30 minutes every day;</li><li>Sit less and move more</li></ul>");
 
                     var pic = "<img id='ff' src='picture/normal.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change2").append(pic);
                 } else if (BMIfe >= 25 && BMIfe <= 30) {
                     $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are over weight");
+                    $("#submit2 .modal-body .condition2").html("15.9% female adults in HK, and 18.2% of total adults, have the same health condition with you.");
 
 
                     var pic = "<img id='rf' src='picture/over.jpg' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change2").append(pic);
+                    $("#submit2 .modal-body .tips2").html("Tip for you to start exercise:<ul><li>Before You Begin: Cut Yourself Some Slack;</li><li>Healthy Living Is a Skill You Improve At, Not a Thing You Just Do;</li><li>Find Something You Enjoy Doing, and Start From There;</li><li>Focus On What You Can Do Right Now, Not On the Finish Line;</li><li>Think of Healthy Habits Like a Video Game: Keep Your Life Bar Full;</li><liDon't Do It Alone: Track Your Progress, and Get Others to Help;</li>");
                 } else if (BMIfe >= 30) {
                     $("#submit2 .modal-body .BMIfe").html("Your BMI is: " + Math.round(BMIfe) + ", You are obesity , Doctor Robot is not happy!");
+                    $("#submit2 .modal-body .condition2").html("15.5% female adults in HK, and 21.0% of total adults, have the same health condition with you.");
 
 
                     var pic = "<img id='tf' src='picture/obesity.png' style='display:block; margin-right:auto; margin-left:auto; height:300px;'>";
 
                     $("#img-change2").append(pic);
-
+                    $("#submit2 .modal-body .tips2").html("Some weight loss tips to reduce obesity:<ul><li>Calculate How Much You Should Lose;</li><li>Change Your Eating Habits;</li><li>Exercise Regularly;</li><li>Try Baking Instead of Frying;</li><li>Try Natural Herbs;</li><li>Incorporate Different Spices into Your Food;</li><li>Get Some of the Stress Out of Your Life</li>");
                 }
-                $("#submit2 .modal-body .BMRfe").html("Your BMR is: " + Math.round(BMRfe));
+
             })
         });
     </script>
